@@ -48,9 +48,13 @@ async function checkWeather(city){
     
     
 }
-serchBtn.addEventListener("click",()=>{
-    checkWeather(serchBox.value);
-
+document.addEventListener("DOMContentLoaded",()=>{
+    serchBox.focus()
+    serchBtn.addEventListener("click",()=>{
+    
+        checkWeather(serchBox.value);
+    
+    }) 
 })
 
 

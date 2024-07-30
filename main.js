@@ -9,7 +9,7 @@ async function checkWeather(city){
     
     const response =await fetch(ApiUrl + city + `&appid=${ApiKey}`);
     var data =await response.json();
-    if(response.status== 404 || response.status== 400  ){
+    if(response.status== 404 || response.status== 400 || city[0]==` ` ){
        
         document.querySelector(".error").style.display="block";
        // document.querySelector(".weather").classList.remove("show");

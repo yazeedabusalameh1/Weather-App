@@ -101,14 +101,10 @@ body{
 }
 .weather{
     display: none;
-    opacity: 0;
+    opacity: 1;
     transition: 0.5s ease;
 }
-.weather.show{
-    display:block;
-    opacity: 1;
-    transition: 2s ease;
-}
+
 .error{
     text-align: center;
     margin-left: 10px;

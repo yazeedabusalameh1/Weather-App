@@ -9,15 +9,15 @@ async function checkWeather(city){
     
     const response =await fetch(ApiUrl + city + `&appid=${ApiKey}`);
     var data =await response.json();
-    if(response.status== 404 ){
+    if(response.status== 404 || response.status== 400  ){
        
         document.querySelector(".error").style.display="block";
-        document.querySelector(".weather").classList.remove("show");
+       // document.querySelector(".weather").classList.remove("show");
         document.querySelector(".weather").style.display="none";
 
     }
     else{
-        document.querySelector(".weather").classList.add("show");
+        //document.querySelector(".weather").classList.add("show");
         
     document.querySelector(".city").innerHTML = data.name;
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp) +"°c";
